@@ -8,12 +8,12 @@ $(navButton).click(() => {
     if (navButton.hasClass("fa-times")) {
         navButton.removeClass("fa-times")
         navButton.addClass("fa-bars");
-        navOptions.toggleClass("notshow");
+        navOptions.toggleClass("show_menu");
         return;
     }
     navButton.removeClass('fa-bars');
     navButton.addClass("fa-times");
-    navOptions.toggleClass("notshow")
+    navOptions.toggleClass("show_menu")
 })
 
 // $(window).resize(() => {
