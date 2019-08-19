@@ -12,49 +12,68 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" href="./assets//font awesome/css/all.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <header>
-        <div class="row">
-            <div class="col-3">
-                <div class="home-logo">
-                    <img src="./assets/img/logo-osf.png" alt="OSF Academy - logo" srcset="" title="Home">
-                </div>
+        <div class="logopanel row">
+            <div class="logopanel__exit col-4">
+                <img src="./assets/img/icons/exit.svg" alt="Exit menu" srcset="">
             </div>
-
-            <div class="col-md-9">
-                <nav class="header-nav">
-                    <ul class="main-options">
-                        <li>SERVICES</li>
-                        <li>COMPANY</li>
-                        <li>LIBRARY</li>
-                        <li>CONTACT US</li>
-                    </ul>
-
-                    <ul class="us-options">
-                        <li>EN</li>
-                        <li>$US</li>
-                    </ul>
-                    <ul class="">
-                        <li>
-                            <img src="./assets/img/icons/search.png" alt="search" srcset="">
-                        </li>
-                        <li>
-                            <img src="./assets/img/icons/user.png" alt="search" srcset="">
-                        </li>
-                        <li>
-                            <img src="./assets/img/icons/heart.png" alt="search" srcset="">
-                        </li>
-                        <li>
-                            <img src="./assets/img/icons/bag.png" alt="search" srcset="">
-                        </li>
-                    </ul>
-                </nav>
+            <div class="logopanel__homelogo col-7">
+                <img src="./assets/img/icon-osf.png" alt="OSF Academy - logo" srcset="" title="Home">
             </div>
         </div>
+
+        <nav class="headernav row">
+            <ul class="headernav__option col-12">
+                <li>
+                    <a>services</a>
+                    <a class="fas fa-caret-down"></a>
+                </li>
+                <li>
+                    <a>company</a>
+                    <a class="fas fa-caret-down"></a>
+                </li>
+                <li>
+                    <a>library</a>
+                    <a class="fas fa-caret-down"></a>
+                </li>
+                <li>
+                    <a>contact us</a>
+                    <a class="fas fa-caret-down"></a>
+                </li>
+            </ul>
+
+            <div class="headernav__option--lang col-3">
+                <ul class="headernav__lang__option">
+                    <li>EN</li>
+                    <li>$US</li>
+                </ul>
+                <ul class="headernav__icons">
+            </div>
+
+            <ul class="headernav__option--userfixed col-12">
+                <li>
+                    <img src="./assets/img/icons/search.svg" alt="search" srcset="">
+                </li>
+                <li>
+                    <img src="./assets/img/icons/user.svg" alt="search" srcset="">
+                </li>
+                <li>
+                    <img src="./assets/img/icons/heart.svg" alt="search" srcset="">
+                </li>
+                <li>
+                    <img src="./assets/img/icons/bag.svg" alt="search" srcset="">
+                </li>
+            </ul>
+
+
+        </nav>
+
     </header>
 
 </body>

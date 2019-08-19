@@ -15,46 +15,110 @@ $primary-font: Lato;
     list-style: none;
 }
 
-body{
-    padding: 0px 30px;
-}
+// body{
+//     padding: 0px 30px;
+// }
 
-header{
-    width: 100%;
+// header{
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+// }
+
+// .home-logo{
+//     margin: 10px 40px 10px 0px;
+// }
+
+// .header-nav{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     font-size: 14px;
+// }
+
+// .header-nav ul{
+//     margin: 0px;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 0px;
+
+//     li{
+//         cursor: pointer;
+//         margin: 0px 20px;
+//         font-size: 14px;
+//         text-align: center;
+
+//         &:hover{
+//             color: blue;
+//         }
+//     }
+// }
+
+$darker-color: #262a32;
+
+.logopanel{
     display: flex;
     align-items: center;
+    padding: 5px 0px;
+
+    .logopanel__exit{
+    margin: 0px 14px;
+    cursor: pointer;
+    }
 }
 
-.home-logo{
-    margin: 10px 40px 10px 0px;
+.row{
+    margin-left: 0px;
 }
+.headernav{
+    width: 100vw;
+    background: $darker-color;
+    color: white;
 
-.header-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 14px;
-}
+    .headernav__option{
+        width: 100%;
+        margin: 0px;
+        li{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 7px 0px;
+            cursor: pointer;
+            user-select: none;
+            text-transform: uppercase;
+        }
+    }
 
-.header-nav ul{
-    margin: 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px;
+    .headernav__option--lang{
+        display: none;
+    }
 
-    li{
-        cursor: pointer;
-        margin: 0px 20px;
-        font-size: 14px;
-        text-align: center;
-
-        &:hover{
-            color: blue;
+    .headernav__option--userfixed{
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        margin: 0px;
+        padding: 19px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: $darker-color;
+        
+        li{
+            width: 24px;    
+            margin: 0px 18px;
+            cursor: pointer;
+            
         }
     }
 }
+
+.notshow{
+    display: none;
+}
+
 
 /* media queries ------------------------*/
 
