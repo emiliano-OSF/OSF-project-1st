@@ -20,16 +20,17 @@
 <body>
     <header>
         <div class="logopanel row">
-            <div class="logopanel__exit col-4">
-                <img src="./assets/img/icons/exit.svg" alt="Exit menu" srcset="">
+            <div class="logopanel__button col-4">
+                <!-- <img src="./assets/img/icons/exit.svg" id="toggle__nav" alt="Exit menu" srcset=""> -->
+                <span class="fas fa-bars" id="toggle__nav"></span>
             </div>
             <div class="logopanel__homelogo col-7">
                 <img src="./assets/img/icon-osf.png" alt="OSF Academy - logo" srcset="" title="Home">
             </div>
-        </div>
+        </div> 
 
-        <nav class="headernav row">
-            <ul class="headernav__option col-12">
+        <nav class="headernav row ">
+            <ul id="headernav__option" class="headernav__option notshow col-12">
                 <li>
                     <a>services</a>
                     <a class="fas fa-caret-down"></a>
@@ -75,6 +76,9 @@
         </nav>
 
     </header>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
 
 </body>
 
