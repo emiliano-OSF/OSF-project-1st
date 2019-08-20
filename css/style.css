@@ -10,10 +10,19 @@
   font-family: Lato;
   list-style: none; }
 
+header {
+  position: fixed;
+  z-index: 10;
+  top: 0px; }
+
 .logopanel {
   display: flex;
+  width: 100vw;
+  height: 60px;
+  background-color: white;
   align-items: center;
-  padding: 5px 0px; }
+  padding: 5px 0px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
   .logopanel .logopanel__button {
     margin: 0px 14px;
     cursor: pointer;
@@ -23,17 +32,19 @@
   margin-left: 0px; }
 
 .headernav {
+  z-index: 1000;
   width: 100vw;
-  background: #262a32;
   color: white; }
   .headernav .headernav__option {
-    width: 100%;
-    margin: 0px; }
+    left: -100%;
+    padding: 0px 14px;
+    background: #262a32;
+    transition: left 200ms; }
     .headernav .headernav__option li {
       width: 100%;
       display: flex;
       justify-content: space-between;
-      padding: 7px 0px;
+      padding: 7px 10px;
       cursor: pointer;
       user-select: none;
       text-transform: uppercase; }
@@ -54,8 +65,51 @@
       margin: 0px 18px;
       cursor: pointer; }
 
-.show_menu {
-  display: none; }
+.cloud-solution__container {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  margin: 60px auto 0px auto;
+  padding: 10px; }
+  .cloud-solution__container .carousel {
+    position: relative;
+    width: 276px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; }
+    .cloud-solution__container .carousel .carousel__items {
+      display: inline-block;
+      overflow: hidden;
+      width: 271px;
+      height: 276px; }
+      .cloud-solution__container .carousel .carousel__items ul {
+        position: relative;
+        right: 0px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row; }
+    .cloud-solution__container .carousel .carousel__item {
+      background: tomato; }
+    .cloud-solution__container .carousel .carousel__buttons {
+      position: relative;
+      bottom: 20px;
+      width: 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center; }
+      .cloud-solution__container .carousel .carousel__buttons .carousel__btn {
+        width: 10px;
+        height: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        cursor: pointer; }
+      .cloud-solution__container .carousel .carousel__buttons .carousel__btn--selected {
+        width: 15px;
+        height: 15px;
+        border: 3px solid white; }
 
 /* media queries ------------------------*/
 

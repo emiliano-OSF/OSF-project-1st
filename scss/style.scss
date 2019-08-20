@@ -15,10 +15,6 @@ $primary-font: Lato;
     list-style: none;
 }
 
-// body{
-//     padding: 0px 30px;
-// }
-
 // header{
 //     width: 100%;
 //     display: flex;
@@ -58,10 +54,20 @@ $primary-font: Lato;
 
 $darker-color: #262a32;
 
+header{
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+}
+
 .logopanel{
     display: flex;
+    width: 100vw;
+    height: 60px;
+    background-color: white;
     align-items: center;
     padding: 5px 0px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 
     .logopanel__button{
     margin: 0px 14px;
@@ -74,18 +80,20 @@ $darker-color: #262a32;
     margin-left: 0px;
 }
 .headernav{
+    z-index: 1000;
     width: 100vw;
-    background: $darker-color;
     color: white;
 
     .headernav__option{
-        width: 100%;
-        margin: 0px;
+        left: -100%;
+        padding: 0px 14px;
+        background: $darker-color;
+        transition: left 200ms;
         li{
             width: 100%;
             display: flex;
             justify-content: space-between;
-            padding: 7px 0px;
+            padding: 7px 10px;
             cursor: pointer;
             user-select: none;
             text-transform: uppercase;
@@ -116,10 +124,73 @@ $darker-color: #262a32;
     }
 }
 
-.show_menu{
-    display: none;
+.cloud-solution__container{
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    //margin-top: 60px;
+    margin: 60px auto 0px auto;
+    padding: 10px;
+
+    .carousel{
+        position: relative;
+        //right: 100%;
+        width: 276px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        
+        .carousel__items{
+            display: inline-block;
+            overflow: hidden;
+            width: 271px;
+            height: 276px;
+            
+            ul{
+                position: relative;
+                right: 0px;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        .carousel__item{
+            background: tomato;
+        }
+
+        .carousel__buttons{
+            position: relative;
+            bottom: 20px;
+            width: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            .carousel__btn{
+                width: 10px;
+                height: 10px;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            .carousel__btn--selected{
+                width: 15px;
+                height: 15px;
+                border: 3px solid white;
+            }
+        }
+    }
 }
 
+// .show_menu{
+//     position: fixed;
+//     left: 0%;
+// }
 
 /* media queries ------------------------*/
 
