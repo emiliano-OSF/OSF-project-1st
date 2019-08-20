@@ -23,25 +23,28 @@ $(nav_button).click(() => {
 
 $(document).ready(() => {
     var item_width = $("#carousel__items li").width()
-    var carousel_width = $('#carousel__items ul').width()
-    var right_value = item_width;
-    var positions = { 'btn-1': 0, 'btn-2': item_width, 'btn-3': (item_width * 2) };
     var current_position = 0;
-    console.log(positions);
 
     $(".carousel__btn").click(function () {
         let btn = $(this).attr('id');
-        //console.log(btn);                   CONTINUAÇÃO DA TRANSIÇÃO DO CAROUSEL
 
-        right_value = positions.
-
-        $('#carousel__items ul').animate({ right: right_value }, 200);
-        //console.log(right_value, (carousel_width * 3));
-        if (right_value == carousel_width * 3) {
-            right_value = carousel_width;
-            return;
+        if (btn == 'btn-2') {
+            current_position = item_width;
+            $('#btn-2').addClass('carousel__btn--selected');
+            $('#btn-1').removeClass('carousel__btn--selected');
+            $('#btn-3').removeClass('carousel__btn--selected');
+        } else if (btn == 'btn-3') {
+            current_position = item_width * 2;
+            $('#btn-3').addClass('carousel__btn--selected');
+            $('#btn-1').removeClass('carousel__btn--selected');
+            $('#btn-2').removeClass('carousel__btn--selected');
+        } else {
+            current_position = 0;
+            $('#btn-1').addClass('carousel__btn--selected');
+            $('#btn-2').removeClass('carousel__btn--selected');
+            $('#btn-3').removeClass('carousel__btn--selected');
         }
-        right_value += carousel_width;
+        $('#carousel__items ul').animate({ right: current_position }, 200);
     })
 
 
