@@ -14,43 +14,11 @@ $primary-font: Lato;
     font-family: $primary-font;
     list-style: none;
 }
+body{
+    padding: 0px 0px 70px 0px;
+}
 
-// header{
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-// }
 
-// .home-logo{
-//     margin: 10px 40px 10px 0px;
-// }
-
-// .header-nav{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     font-size: 14px;
-// }
-
-// .header-nav ul{
-//     margin: 0px;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: space-between;
-//     padding: 0px;
-
-//     li{
-//         cursor: pointer;
-//         margin: 0px 20px;
-//         font-size: 14px;
-//         text-align: center;
-
-//         &:hover{
-//             color: blue;
-//         }
-//     }
-// }
 
 $darker-color: #262a32;
 
@@ -132,53 +100,106 @@ header{
     margin: 60px auto 0px auto;
     padding: 10px;
 
-    .carousel{
+}
+.carousel{
+    position: relative;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    
+    .carousel__items{
         position: relative;
-        //right: 100%;
-        width: 276px;
+        width: 271px;
+        height: 276px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow: hidden;
-        
-        .carousel__items{
-            display: inline-block;
-            overflow: hidden;
-            width: 271px;
-            height: 276px;
-            
-            ul{
-                position: relative;
-                right: 0px;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                flex-direction: row;
-            }
-        }
-        .carousel__buttons{
-            position: relative;
-            bottom: 20px;
-            width: 100px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
+        flex-direction: row;
+        right: 0px;
+        margin: 0;
+        padding: 0;
 
-            .carousel__btn{
-                width: 10px;
-                height: 10px;
-                background-color: rgba(0, 0, 0, 0.5);
-                border-radius: 50%;
-                cursor: pointer;
-            }
-
-            .carousel__btn--selected{
-                width: 15px;
-                height: 15px;
-                border: 3px solid white;
-            }
+        .carousel__item{
+            height: inherit;
+            width: inherit;
         }
+
+        img{
+            display: block;
+            height: inherit;
+            width: inherit;
+        }
+
+        .slide__info{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 20px;
+            color: white;
+        }
+        .slide__prod-info{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            color: $darker-color;
+            text-align: center;
+            font-size: 14px;
+            background-color: white;
+        }
+    }
+    .prod-carousel__items{
+        position: relative;
+        width: 271px;
+        height: 276px;
+        display: flex;
+        flex-direction: row;
+        right: 0px;
+        margin: 0;
+        padding: 0;
+    }
+}
+.carousel__buttons{
+    position: relative;
+    bottom: 20px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .carousel__btn{
+        width: 10px;
+        height: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .carousel__btn--selected{
+        width: 15px;
+        height: 15px;
+        border: 3px solid white;
+        background-color: rgb(192, 192, 192);
+    }
+}
+
+.popular-items__container{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $darker-color;
+    //padding: 20px 0px;
+
+    h2{
+        display: block;
+        margin: 20px 0px ;
+        width: fit-content;
+        font-size: 20px;
+        color: white;
     }
 }
 
