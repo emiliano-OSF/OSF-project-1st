@@ -1,3 +1,16 @@
+/* styles on scroll track and bars */
+::-webkit-scrollbar {
+  width: 2%; }
+
+::-webkit-scrollbar-track {
+  background: #ffffff; }
+
+::-webkit-scrollbar-thumb {
+  background: #888; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
+
 /*fonts --------------------------------*/
 @font-face {
   font-family: Lato;
@@ -37,6 +50,7 @@ header {
 .headernav {
   z-index: 1000;
   width: 100vw;
+  height: 0;
   color: white; }
   .headernav .headernav__option {
     left: -100%;
@@ -157,6 +171,35 @@ header {
     width: fit-content;
     font-size: 20px;
     color: white; }
+
+.banner-osf {
+  height: fit-content;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Lato;
+  color: white; }
+  .banner-osf .banner-osf__info {
+    height: 0;
+    position: relative;
+    top: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .banner-osf .banner-osf__info h2 {
+      font-size: 24px;
+      font-weight: bold; }
+    .banner-osf .banner-osf__info p {
+      display: block;
+      width: 300px;
+      text-align: center; }
+
+.advantages {
+  width: 100%;
+  background-color: #262a32;
+  color: white; }
 
 /* media queries ------------------------*/
 
