@@ -24,6 +24,8 @@
 
 /* GLOBAL VARIABLES ---------------------*/
 $primary-font: Lato;
+$darker-color: #262a32;
+$secondary-darker-color: #45413e;
 
 *{
     box-sizing: border-box;
@@ -38,7 +40,7 @@ body{
 
 
 
-$darker-color: #262a32;
+
 
 header{
     position: fixed;
@@ -241,13 +243,14 @@ header{
         flex-direction: column;
         
         h2{
-            font-size: 24px;
+            font-size: 30px;
             font-weight: bold;
         }
 
         p{
             display: block;
             width: 300px;
+            font-size: 14px;
             text-align: center;
         }
     }
@@ -255,16 +258,51 @@ header{
 
 .advantages{
     width: 100%;
-    background-color: $darker-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondary-darker-color;
+    padding: 40px 20px 10px;
     color: white;
-    
+
+    .advantages__panel{
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .advantages__icon{
+            width: 62px;
+            margin: 0px 25px;
+        }
+
+    }
+    .reversed{
+        // reverse the orientation of de icon and the text block - just form mobile
+        flex-direction: row-reverse;
+    }
+
+    .advantages__info{
+        h4{
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        p{
+            display: block;
+            width: 140px;
+            font-size: 14px;
+            color: #868380;
+        }
+    }
+
 }
 
-
-// .show_menu{
-//     position: fixed;
-//     left: 0%;
-// }
+footer{
+    height: 200px;
+    width: 100%;
+    padding: 20px 15;
+    background-color: gray
+}
 
 /* media queries ------------------------*/
 
