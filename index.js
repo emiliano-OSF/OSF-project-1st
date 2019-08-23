@@ -87,9 +87,12 @@ $(document).ready(() => {
 
         $('#cloud-carousel__items').animate({ right: current_solution_pos }, 200);
         $('#popular-carousel__items').animate({ right: current_pop_pos }, 200);
-
     })
 
+    $("#copy-year").text( function(){
+        let date = new Date();
+        return  date.getFullYear();
+    })
 
 });
 
