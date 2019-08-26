@@ -39,10 +39,6 @@ body{
     box-sizing: border-box;
 }
 
-
-
-
-
 header{
     position: fixed;
     z-index: 10;
@@ -63,6 +59,10 @@ header{
     cursor: pointer;
     font-size: 20px;
     }
+}
+
+.img-1280{
+    display: none;
 }
 
 .row{
@@ -90,7 +90,7 @@ header{
             transition: height 150ms;
 
             &:hover{
-                height: fit-content;
+                height: auto;
             }
         }
         .nav-menu__title{
@@ -110,7 +110,7 @@ header{
             font-size: 13px;
             
             &:hover{
-                height: fit-content;
+                height: auto;
             }
 
             .nav-menu__op{
@@ -151,10 +151,53 @@ header{
     }
 }
 
+/* media queries ------------------------*/
+
+@media only screen and (min-width: 321px){
+    .img-1280{
+        display: block;
+        height: 46px;
+    }
+    .img-320{
+        display: none;
+    }
+    
+}
+@media only screen and (min-width: 768px){
+    .headernav{
+        color: tomato
+    }
+}
+
+
+.login-register{
+    position: fixed;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .login-register__panel{
+        position: relative;
+        height: 60%;
+        width: 80%;
+        top: 40%;
+        left: 50%;
+        transform: translate( -50%, -50%);
+        border-radius: 5px;
+        background: white;
+        padding: 50px;
+    }
+}
+
+
 .cloud-solution__container{
     position: relative;
     z-index: 1;
-    width: fit-content;
+    width: 271px;
     //margin-top: 60px;
     margin: 60px auto 0px auto;
     padding: 10px;
@@ -162,7 +205,6 @@ header{
 }
 .carousel{
     position: relative;
-    width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -362,7 +404,7 @@ footer{
             transition: height 150ms;
 
             &:hover{
-                height: fit-content;
+                height: 200px;
             }
 
             span{
@@ -401,5 +443,4 @@ footer{
     }
 }
 
-/* media queries ------------------------*/
 

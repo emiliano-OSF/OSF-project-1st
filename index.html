@@ -21,16 +21,16 @@
     <header>
         <div class="logopanel row">
             <div class="logopanel__button col-3">
-                <!-- <img src="./assets/img/icons/exit.svg" id="toggle__nav" alt="Exit menu" srcset=""> -->
                 <span class="fas fa-bars" id="toggle__nav"></span>
             </div>
             <div class="logopanel__homelogo col-7">
-                <img src="./assets/img/icon-osf.png" alt="OSF Academy - logo" srcset="" title="Home">
+                <img class="img-320" src="./assets/img/icon-osf.png" alt="OSF Academy - logo" srcset="" title="Home">
+                <img class="img-1280" src="./assets/img/logo-osf.png" alt="OSF Academy - logo" srcset="" title="Home">
             </div>
         </div>
 
         <nav class="headernav row ">
-            <ul id="headernav__option" class="headernav__option col-12" style="left: 0%;">
+            <ul id="headernav__option" class="headernav__option col-12">
                 <li>
                     <span class="nav-menu__title">
                         <a>SERVICES</a>
@@ -133,21 +133,30 @@
                     <img src="./assets/img/icons/search.svg" alt="search" srcset="">
 
                 </li>
-                <li>
-                    <img src="./assets/img/icons/user.svg" alt="search" srcset="">
+                <li id="login-register">
+                    <img src="./assets/img/icons/user.svg" alt="Login or register" srcset="">
 
                 </li>
-                <li>
-                    <img src="./assets/img/icons/heart.svg" alt="search" srcset="">
+                <li class="wishlist">
+                    <img src="./assets/img/icons/heart.svg" alt="Wishlist" srcset="">
 
                 </li>
-                <li>
-                    <img src="./assets/img/icons/bag.svg" alt="search" srcset="">
+                <li id="cart">
+                    <img src="./assets/img/icons/bag.svg" alt="cart" srcset="">
 
                 </li>
             </ul>
         </nav>
     </header>
+
+    <section class="login-register">
+        <div class="login-register__panel">
+            <h3>Sing in</h3>
+            <div class="email-group">
+                <input type="datetime-local" name="user-email" id="user-email">
+            </div>
+        </div>
+    </section>
 
     <section class="cloud-solution__container">
         <div class="carousel">
@@ -312,15 +321,14 @@
 
             </div>
             <div class="footer__menu--op">
-                <span>About <span class="fas fa-caret-down"></span></span>
                 <div class="footer-category">
-                        <span class="footer-category">About <span class="fas fa-caret-down"></span></span>
-                        <a class="footer-category__op" href="./pages/not-found.html">About us</a>
-                        <a class="footer-category__op" href="./pages/not-found.html">Delivery</a>
-                        <a class="footer-category__op" href="./pages/not-found.html">Testmonials</a>
-                        <a class="footer-category__op" href="./pages/not-found.html">Contact</a>
-    
-                    </div>
+                    <span class="footer-category">About <span class="fas fa-caret-down"></span></span>
+                    <a class="footer-category__op" href="./pages/not-found.html">About us</a>
+                    <a class="footer-category__op" href="./pages/not-found.html">Delivery</a>
+                    <a class="footer-category__op" href="./pages/not-found.html">Testmonials</a>
+                    <a class="footer-category__op" href="./pages/not-found.html">Contact</a>
+
+                </div>
             </div>
         </div>
 

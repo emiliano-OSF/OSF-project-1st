@@ -45,6 +45,9 @@ header {
     cursor: pointer;
     font-size: 20px; }
 
+.img-1280 {
+  display: none; }
+
 .row {
   margin-left: 0px; }
 
@@ -68,7 +71,7 @@ header {
       cursor: pointer;
       transition: height 150ms; }
       .headernav .headernav__option li:hover {
-        height: fit-content; }
+        height: auto; }
     .headernav .headernav__option .nav-menu__title {
       display: flex;
       flex-direction: row;
@@ -82,7 +85,7 @@ header {
       padding: 5px 13px;
       font-size: 13px; }
       .headernav .headernav__option .nav-menu:hover {
-        height: fit-content; }
+        height: auto; }
       .headernav .headernav__option .nav-menu .nav-menu__op {
         width: 200px;
         display: flex;
@@ -108,16 +111,46 @@ header {
       margin: 0px 18px;
       cursor: pointer; }
 
+/* media queries ------------------------*/
+@media only screen and (min-width: 321px) {
+  .img-1280 {
+    display: block;
+    height: 46px; }
+
+  .img-320 {
+    display: none; } }
+@media only screen and (min-width: 768px) {
+  .headernav {
+    color: tomato; } }
+.login-register {
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .login-register .login-register__panel {
+    position: relative;
+    height: 60%;
+    width: 80%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background: white;
+    padding: 50px; }
+
 .cloud-solution__container {
   position: relative;
   z-index: 1;
-  width: fit-content;
+  width: 271px;
   margin: 60px auto 0px auto;
   padding: 10px; }
 
 .carousel {
   position: relative;
-  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -272,7 +305,7 @@ footer {
       cursor: pointer;
       transition: height 150ms; }
       footer .footer__menu .footer__menu--op:hover {
-        height: fit-content; }
+        height: 200px; }
       footer .footer__menu .footer__menu--op span {
         display: flex;
         flex-direction: row;
@@ -294,7 +327,5 @@ footer {
     footer .footer__social-media img {
       display: block;
       margin: 0px 10px; }
-
-/* media queries ------------------------*/
 
 /*# sourceMappingURL=style.css.map */
